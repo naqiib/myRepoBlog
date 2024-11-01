@@ -1,0 +1,2 @@
+# myRepoBlog
+details of myself
