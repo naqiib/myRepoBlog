@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        #about p,
+        #personal-info ul,
+        #skills ul {
+            margin-top: 1rem;
+        }
+
+        #personal-info ul,
+        #skills ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #skills li,
+        #personal-info li {
+            background: #e7e7e7;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .post {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        .read-more-content {
+            display: none;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML Content -->
+    <header>
+        <h1>Welcome to My Personal Blog</h1>
+        <p>Your insight into my world</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I’m Naqib Ullah, a student of computer science with a passion for coding, design, and personal growth. I enjoy working on creative projects and learning new skills. Welcome to my blog where I share my journey, experiences, and insights.</p>
+    </section>
+
+    <section id="personal-info">
+        <h2>Personal Information</h2>
+        <ul>
+            <li><strong>Name:</strong> Naqib Ullah</li>
+            <li><strong>Age:</strong> 20</li>
+            <li><strong>Location:</strong> Chitral, Pakistan</li>
+            <li><strong>Field of Study:</strong> Computer Science</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>Photo Quality Control</li>
+            <li>Basic Video Editing</li>
+            <li>Graphic Design</li>
+            <li>Front-end Development</li>
+        </ul>
+    </section>
+
+    <section id="blog">
+        <h2>Latest Posts</h2>
+        <article class="post">
+            <h3>The Journey into Tech</h3>
+            <p>My journey into tech started from a small village in Chitral...</p>
+            <span class="read-more-content">I have overcome numerous challenges along the way, gaining valuable insights and skills that have shaped my journey.</span>
+            <a class="read-more-btn" onclick="toggleReadMore(this)">Read more</a>
+        </article>
+        <article class="post">
+            <h3>Balancing Work and Study</h3>
+            <p>Managing work and studies has been challenging but rewarding...</p>
+            <span class="read-more-content">Through careful planning and time management, I’ve found ways to excel in both my academic and professional life.</span>
+            <a class="read-more-btn" onclick="toggleReadMore(this)">Read more</a>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Naqib Ullah. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Read More functionality -->
+    <script>
+        function toggleReadMore(button) {
+            const content = button.previousElementSibling;
+            if (content.style.display === "inline") {
+                content.style.display = "none";
+                button.textContent = "Read more";
+            } else {
+                content.style.display = "inline";
+                button.textContent = "Read less";
+            }
+        }
+    </script>
+
+</body>
+</html>
